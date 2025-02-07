@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.gotapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.gotapp"
@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +48,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
 }
