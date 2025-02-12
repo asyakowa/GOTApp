@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val persons = listOf(Persons("Kate"), Persons("Ann"), Persons("Tim"))
+        val persons = listOf(Person("Kate"), Person("Ann"), Person("Tim"))
 
         for (person in persons) {
             println("Персонаж #${person.firstName}")

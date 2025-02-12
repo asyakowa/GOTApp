@@ -1,6 +1,5 @@
 package com.example.gotapp
 
-data class Persons(
+data class Person(
     val firstName: String,
-
-    )
+)

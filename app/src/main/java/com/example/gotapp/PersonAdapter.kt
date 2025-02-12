@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class PersonAdapter(
-    private val persons: List<Persons>
+    private val persons: List<Person>
 ) : RecyclerView.Adapter<PersonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
@@ -29,9 +29,8 @@ class PersonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     private val personInf: TextView = itemView.findViewById(R.id.personInfo)
 
-    fun bind(model: Persons) {
+    fun bind(model: Person) {
         personInf.text = model.firstName
-
     }
 
 }
