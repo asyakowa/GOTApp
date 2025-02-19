@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.detekt)
 }
 
 android {
@@ -52,4 +53,12 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    // форматер кода
+    detektPlugins(libs.detekt.formatting)
+}
+
+detekt {
+    config.setFrom("$projectDir/../config/detekt/detekt.yml")
+    buildUponDefaultConfig = true
+    autoCorrect = true
 }

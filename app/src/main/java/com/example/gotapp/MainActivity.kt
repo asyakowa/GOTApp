@@ -12,17 +12,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val persons = listOf(Person("Kate"), Person("Ann"), Person("Tim"))
+        val persons = listOf(
+            Person("Kate", "https://i.pravatar.cc/150?img=5"),
+            Person("Ann", "https://i.pravatar.cc/150?img=9"),
+            Person("Tim", "https://i.pravatar.cc/150?img=8")
+        )
 
-        for (person in persons) {
-            println("Персонаж #${person.firstName}")
-        }
 
-        val personAdapter = PersonAdapter(persons)
+        val repeatedPersons = List(17) { persons }.flatten()
+
+        val personAdapter = PersonAdapter(repeatedPersons)
         recyclerView.adapter = personAdapter
     }
+
+
 }
