@@ -15,6 +15,9 @@
         android:theme="@style/Theme.GOTApp"
         tools:targetApi="31">
         <activity
+            android:name=".PersonPageInfoActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

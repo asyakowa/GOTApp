@@ -1,8 +1,10 @@
 package com.example.gotapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
 
         getPersonsFromApi(recyclerView)
+//
     }
 
     private fun getPersonsFromApi(recyclerView: RecyclerView) {
