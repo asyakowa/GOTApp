@@ -18,6 +18,9 @@
             android:name=".PersonPageInfoActivity"
             android:exported="true" />
         <activity
+            android:name=".ListPersonsActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

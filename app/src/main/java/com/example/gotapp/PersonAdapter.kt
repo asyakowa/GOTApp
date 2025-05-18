@@ -22,10 +22,19 @@ class PersonAdapter(
     }
 
     override fun onBindViewHolder(holder: PersonViewHolder, position: Int) {
-        holder.bind(persons[position])
+        val person = persons[position]
+        holder.bind(person)
 
-
-
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, PersonPageInfoActivity ::class.java).apply {
+                putExtra("fullName", person.fullName)
+                putExtra("family", person.family)
+                putExtra("imageUrl", person.imageUrl)
+                putExtra("title", person.title)
+            }
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -40,14 +49,16 @@ class PersonAdapter(
     class PersonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val personImageView: ImageView = itemView.findViewById(R.id.imageView)
         private val personFullName: TextView = itemView.findViewById(R.id.fullName)
-        private val personTitle: TextView = itemView.findViewById(R.id.title)
+//        private val personTitle: TextView = itemView.findViewById(R.id.title)
         private val personFamily: TextView = itemView.findViewById(R.id.family)
 
         fun bind(model: Person) {
             personFullName.text = model.fullName
-            personTitle.text=model.title
+//            personTitle.text=model.title
             personFamily.text=model.family
-            Log.d("PersonViewHolder", "Binding person: ${model.fullName}, image URL: ${model.imageUrl}")
+            Log.d("PersonViewHolder", "Binding person: ${model.fullName}, " +
+                    "image URL: ${model.imageUrl}")
+
 
 
 
