@@ -1,28 +1,23 @@
 package com.example.gotapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.gotapp.R.layout.activity_main
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(activity_main)
 
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-
-        val persons = listOf(Person("Kate"), Person("Ann"), Person("Tim"))
-
-        for (person in persons) {
-            println("Персонаж #${person.firstName}")
-        }
-
-        val personAdapter = PersonAdapter(persons)
-        recyclerView.adapter = personAdapter
+    val listPersinsButton = findViewById<Button>(R.id.listPersonsBtn)
+    listPersinsButton.setOnClickListener {
+        val displayIntent = Intent(this, ListPersonsActivity::class.java)
+        startActivity(displayIntent)
     }
-}
+
+}}
