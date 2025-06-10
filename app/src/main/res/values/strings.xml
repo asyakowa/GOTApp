@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">GOTApp</string>
-    <string name="error_cnn">Проблемы со связью\n\nЗагрузка не удалась. Проверьте подключение к интернету</string>
+    <string name="error_cnn">Нет интернета.\n\nПроверьте подключение к интернету и после появления сети нажмите на кнопку Обновить</string>
+    <string name="refreshBtn">Обновить</string>
+    <string name="listPersons">Список персонажей </string>
+    <string name="listGames">Список игр </string>
+    <string name="personCard">Карточка персонажа  </string>
+    <string name="gameCard">Карточка игры  </string>
+
+    <string name="nameTextView">Имя:</string>
+    <string name="houseTextView">Дом:</string>
+    <string name="titleTextView">Титул:</string>
 </resources>

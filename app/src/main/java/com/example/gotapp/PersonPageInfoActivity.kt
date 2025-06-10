@@ -1,5 +1,6 @@
 package com.example.gotapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -13,6 +14,8 @@ class PersonPageInfoActivity:AppCompatActivity() {
     private lateinit var fullNamePerson: TextView
     private lateinit var familyPerson: TextView
     private lateinit var titlePerson: TextView
+     lateinit var backButton: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(person_page_info)
@@ -27,13 +30,20 @@ class PersonPageInfoActivity:AppCompatActivity() {
         fullNamePerson.text=fullName
         familyPerson.text=family
         titlePerson.text=title
-
+        backButton=findViewById<ImageView>(R.id.backBtn)
         Glide.with(this)
             .load(imageUrl)
             .placeholder(R.drawable.image_placeholder)
             .apply(RequestOptions().transform(RoundedCorners(20)))
             .into(imageView)
+        openLastActivity()
     }
+    fun openLastActivity(){
+        backButton.setOnClickListener{
+           val intent= Intent(this, ListPersonsActivity::class.java)
+            finish()
+        }
 
+    }
 }
 
