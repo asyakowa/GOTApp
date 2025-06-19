@@ -6,6 +6,8 @@
     <string name="listGames">Список игр </string>
     <string name="personCard">Карточка персонажа  </string>
     <string name="gameCard">Карточка игры  </string>
+    <string name="descriptionGame">Описание игры:  </string>
+    <string name="nameGame">Название игры:  </string>
 
     <string name="nameTextView">Имя:</string>
     <string name="houseTextView">Дом:</string>
