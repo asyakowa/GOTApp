@@ -23,7 +23,7 @@
     android:paddingStart="10dp">
         <TextView
             android:paddingEnd="8dp"
-            android:text="Имя:"
+            android:text="@string/nameTextView"
             android:paddingStart="10dp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
         android:layout_height="match_parent"
         >
         <TextView
-            android:text="Дом:"
+            android:text="@string/houseTextView"
             android:paddingStart="10dp"
             android:paddingEnd="8dp"
             android:layout_height="wrap_content"

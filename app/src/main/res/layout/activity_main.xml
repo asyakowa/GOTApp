@@ -2,7 +2,7 @@
 <LinearLayout :android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#080808"
+    android:background="#040404"
     android:orientation="vertical"
     android:id="@+id/mainActivity"
 
@@ -14,7 +14,7 @@
     android:layout_height="200dp"
     android:src="@drawable/gotmainimage"/>
     <LinearLayout
-
+        android:orientation="vertical"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
@@ -22,14 +22,25 @@
     <Button
         android:id="@+id/listPersonsBtn"
 
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Список персонажей"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="@string/listPersons"
         android:textAllCaps="false"
         android:textSize="25dp"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"
         />
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/games"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="@string/listGames"
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            />
+
 </LinearLayout>
 </LinearLayout>
